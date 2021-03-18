@@ -1,0 +1,19 @@
+Step 1: Open Editor & Search this "slideshow__slide slideshow__slide".
+
+Step 2. Paste this piece of code just above it: (See Video)
+
+        {% if block.settings.image_link != blank %}
+          <a href="{{ block.settings.image_link }}">
+        {% endif %}  
+
+Step 3: Close </a>
+
+Step 4. Search For: image_picker
+
+Step 5. Paste this piece of code just after it (See Video)
+         
+          {
+            "type": "url",
+            "id": "image_link",
+            "label": "Image Link"
+          },
