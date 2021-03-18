@@ -1,0 +1,19 @@
+Step 1: Open Editor (See Video)
+
+Step 2. Paste this piece of code: (See Video)
+
+        {% if block.settings.image_link != blank %}
+                 <a href="{{ block.settings.image_link }}" style="position: absolute; bottom: 0; right: 0; left: 0;top: 0;">
+        {% endif %}   
+
+Step 3: Close </a>
+
+Step 4. Search For: image_picker
+
+Step 5. Paste this piece of code just after it (See Video)
+         
+          {
+            "type": "url",
+            "id": "image_link",
+            "label": "Image Link"
+          },
