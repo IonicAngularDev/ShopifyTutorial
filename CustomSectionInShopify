@@ -1,0 +1,58 @@
+<div class="custom-text-section">
+ {% if section.settings.custom_text_title != blank %} 
+ <h2> {{ section.settings.custom_text_title }} </h2>
+ {% endif %}
+ {% if section.settings.custom_text_body != blank %}
+  <p>{{ section.settings.custom_text_body }}</p>
+ {% endif %}
+ {% if section.settings.view-btn != blank %}
+<button class="view-btn">
+<a href="{{ section.settings.view-btn-link }}">{{ section.settings.view-btn }}</a>
+</button>
+{% endif %}
+</div>
+
+{% schema %}
+  {
+    "name": "Text Box 2",
+    "settings": [
+      {
+        "id": "custom_text_title",
+        "type": "text",
+        "label": "Text box heading",
+        "default": "Title"
+      },
+      {
+        "id": "custom_text_body",
+        "type": "textarea",
+        "label": "Add custom text below",
+        "default": "Add your text here"
+      },
+      {
+         "id": "view-btn-link",
+         "type": "url",
+         "label": "Button URL"
+      },
+     {
+		"id": "view-btn",
+		"type": "text",
+		"label": "Button Name"
+		}
+    ],
+    "presets": [
+      {
+        "name": "Welcome section Test",
+        "category": "ADVANCED LAYOUT"
+      }
+    ]
+  }
+{% endschema %}
+{% stylesheet %}
+.view-btn{
+    display: block;
+    margin: auto;
+    background-color: #000;
+}
+{% endstylesheet %}
+{% javascript %}
+{% endjavascript %}
